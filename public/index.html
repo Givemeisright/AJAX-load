@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>AJAX访问HTML</title>
+</head>
+<body>
+    <p>加载出HTML页面,hello <b id="hello"></b></p> 
+    <main>
+        <button id="getCSS">请求css</button>
+        <button id="getJS">请求JS</button>
+        <button id="getHTML">请求HTML</button>
+        <button id="getXML">请求XML</button>
+        <button id="getJSON">请求JSON</button>
+    </main>
+    <div>
+        <button id="nextPage">next page</button>
+        <button id="beforePage">before page</button>
+        {{page1}}
+        <!--用{{page1}}占位，到时候替换 -->
+    </div>
+    <script>
+        console.log('HTML')
+    </script>
+    
+    <script src="main.js"></script>
+</body>
+</html>
