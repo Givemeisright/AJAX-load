@@ -4,7 +4,7 @@ var url = require('url')
 var port = process.argv[2]
 
 if (!port) {
-    console.log('请指定端口号好不啦？\nnode server.js 8888 这样不会吗？')
+    console.log('请指定端口号？比如输入：\nnode server.js 8888 ')
     process.exit(1)
 }
 
@@ -21,7 +21,7 @@ var server = http.createServer(function (request, response) {
 
     /******** 从这里开始看，上面不要看 ************/
 
-    console.log('有个傻子发请求过来啦！路径（带查询参数）为：' + pathWithQuery)
+    console.log('服务器接收请求，路径（带查询参数）为：' + pathWithQuery)
 
     if (path === '/index.html') {
         response.statusCode = 200
@@ -83,7 +83,7 @@ var server = http.createServer(function (request, response) {
     } else {
         response.statusCode = 404
         response.setHeader('Content-Type', 'text/html;charset=utf-8')
-        response.write(`你输入的路径不存在对应的内容`)
+        response.write(`您输入的路径不存在对应的内容`)
         response.end()
     }
 
@@ -91,4 +91,4 @@ var server = http.createServer(function (request, response) {
 })
 
 server.listen(port)
-console.log('监听 ' + port + ' 成功\n请用在空中转体720度然后用电饭煲打开 http://localhost:' + port)
+console.log('监听 ' + port + ' 成功\n请CTRL+单击打开路径 http://localhost:' + port)
